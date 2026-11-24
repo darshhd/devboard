@@ -1,0 +1,16 @@
+#Lint will be used to check the code syntax, format and indentation
+
+name: Auto linter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone the code
+      uses: actions/checkout@v7
+
+    
