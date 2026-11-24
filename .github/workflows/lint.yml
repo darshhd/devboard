@@ -4,7 +4,7 @@ name: Auto linter
 
 on:
   push:
-    paths: "*.js"
+    paths: "*.py"
 
 jobs:
   code:
@@ -13,4 +13,8 @@ jobs:
     - name: Clone the code
       uses: actions/checkout@v7
 
-    
+    - name: Install python linter
+      run: pip install ruff
+      
+    - name: Run linter
+      run: ruff check .
