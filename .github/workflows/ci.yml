@@ -30,4 +30,3 @@ jobs:
         file: /devboard/frontend/Dockerfile
         push: true
         tags: ${{ vars.DOCKERHUB_USERNAME }}/frontend-master-devboard:latest
-
